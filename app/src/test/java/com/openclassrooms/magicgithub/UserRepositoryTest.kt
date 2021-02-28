@@ -19,8 +19,9 @@ import java.util.stream.Collectors
 @RunWith(JUnit4::class)
 class UserRepositoryTest {
     private var userRepository: UserRepository? = null
-    private val FAKE_USERS: List<User> = FakeApiServiceGenerator.FAKE_USERS
-    private val FAKE_USERS_RANDOM = FakeApiServiceGenerator.FAKE_USERS_RANDOM
+
+    private val FAKE_USERS: List<User> = ArrayList(FakeApiServiceGenerator.FAKE_USERS)
+    private val FAKE_USERS_RANDOM: List<User> = ArrayList(FakeApiServiceGenerator.FAKE_USERS_RANDOM)
 
     @Before
     fun setup() {
