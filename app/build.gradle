@@ -21,6 +21,10 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    
+    viewBinding {
+        enabled true
+    }
     testOptions {
         animationsDisabled = true
     }
@@ -28,6 +32,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // FIX data binding bug
+    implementation 'com.android.databinding:viewbinding:4.0.1'
+
     // ANDROID
     implementation "androidx.appcompat:appcompat:$android_appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$android_constraint_layout_version"
