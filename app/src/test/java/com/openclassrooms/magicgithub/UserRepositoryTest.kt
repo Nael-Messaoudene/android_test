@@ -27,9 +27,9 @@ class UserRepositoryTest {
         userRepository = createUserRepository()
     }
 
-    @get:Test
-    val usersWithSuccess: Unit
-        get() {
+    @Test
+    fun usersWithSuccess()
+        {
             val usersActual: List<User> = userRepository!!.users
             val usersExpected = FAKE_USERS
             Assert.assertThat(usersActual, IsIterableContainingInAnyOrder.containsInAnyOrder<Any>(*usersExpected.toTypedArray()))
